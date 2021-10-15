@@ -15,6 +15,8 @@ RUN npm config set unsafe-perm true
 
 RUN npm install -g typescript
 
+RUN npm install && ./aria.sh && npm start
+
 RUN mkdir /bot
 RUN chmod 777 /bot
 WORKDIR /bot
